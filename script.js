@@ -1,8 +1,9 @@
 const ticketForm = document.querySelector('form');
 const inputKm = document.getElementById('km');
 const inputAge = document.getElementById('age');
-const printTicket = document.getElementById('print-ticket');
 const submit = document.querySelector('submit')
+const printTicket = document.getElementById('print-ticket');
+
 
 const PRICE_PER_KM = 0.21;
 

@@ -58,12 +58,21 @@
             <button id="button" class="btn" type="submit">Calcola prezzo</button>
         </form>
 
-        <div id="print-ticket"></div>
-        
-        <div class="save-botton">
-            <button id="add-wallet-btn" class="btn" type="button">Add to wallet</button>
-            <button id="download-pdf-btn" class="btn-grey" type="button">Download PDF</button>
+        <div id="info-ticket">
+            <span class="info">
+                <i class="bi bi-info-circle"></i>
+                <p><b>Regole di calcolo</b></p>
+            </span>
+                <ul>
+                    <li>Prezzo base: 0,21 € al km</li>
+                    <li>Sconto 20% per i <b>minorenni</b> (under 18)</li>
+                    <li>Sconto 40% per i <b>senior</b> (over 65) </li>
+                </ul>
+            
         </div>
+
+        <div id="print-ticket"></div>
+        <button id="add-wallet-btn" class="btn" type="reset">Nuovo calcolo</button>
     </main>
 </body>
 </html>

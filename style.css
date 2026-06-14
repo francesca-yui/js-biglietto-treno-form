@@ -30,7 +30,7 @@ body {
     height: auto;
     width: 300px;
     padding: 1em;
-    border-radius: 20px;
+    border-radius: 16px;
 
 }
 
@@ -44,7 +44,7 @@ body {
     height: auto;
     width: 300px;
     padding: 1em;
-    border-radius: 20px;
+    border-radius: 16px;
 
     margin-bottom: 20px;
 }
@@ -82,7 +82,7 @@ i {
     align-items: start;
 
     color: #5e718c;
-    font-size: 1.6rem;                              \
+    font-size: 1.6rem;                             
 
     margin:10px;
     padding-right: 15px;
@@ -101,7 +101,6 @@ label {
     width: 200px;
 }
 
-
 .btn {
     background-color: #1b75fd;
     color: aliceblue;
@@ -110,29 +109,73 @@ label {
 
     text-align: center;
     font-size: 1em;
-    width: 9em;
+    width: 300px;
     padding: 0.8em;
-    border-radius: 10em;
+    border-radius: 16px;
 
     margin: 20px 2px;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-.btn-grey {
-    background-color: #9ea0ad;
-    color: aliceblue;
-    border: none;
-    outline: none;
-
-    text-align: center;
-    font-size: 1em;
-    width: 9em;
-    padding: 0.8em;
-    border-radius: 10em;
+.btn:hover {
+    background-color: aliceblue;
+    color: #1b75fd;
+    border: solid #1b75fd;
+}
+#info-ticket {
+    background-color: #eaf3fe;
+    border: 1px solid #edf5ff;
+    
+    width: 300px;
+    height: auto;
+    padding: 1.25em 1.5em;
+    border-radius: 16px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
 }
 
-.save-botton {
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.bi-info-circle {
+    color: #1b75fd;
+    font-size: 1.4em;
     display: inline-block;
+
+    margin: 0px;
+    padding-right: 0 !important;
 }
+
+.info p {
+    justify-content: left;
+    color: #1b75fd;
+    font-size: 1em;
+    margin: 0; 
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.1em; 
+    
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+li {
+    color: #2c3e6b;
+    font-size: 0.8em;
+}
+
 
 #print-ticket {
     background-color: #edeef0;
@@ -142,5 +185,5 @@ label {
     height: 240px;
     width: 300px;
     padding: 0.8em;
-    border-radius: 20px;
+    border-radius: 16px;
 }
