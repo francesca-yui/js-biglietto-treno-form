@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefefe;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    
+    background-color: #edeef0;
+
+    height: auto;
+    width: 300px;
+    padding: 1em;
+    border-radius: 20px;
+
+}
+
+.container-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    
+    background-color: #edeef0;
+
+    height: auto;
+    width: 300px;
+    padding: 1em;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+}
+
+i {
+    width: 50px;
+    color: 5e718c;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    align-content: baseline;
+}
+
+i {
+    justify-content: center;
+    align-items: start;
+
+    color: #5e718c;
+    font-size: 1.6rem;                              \
+
+    margin:10px;
+    padding-right: 15px;
+}
+    
+label {
+    color: #9ea0ad;
+}
+
+.form-control {
+    background-color: #edeef0;
+    color: black;
+    border: none;
+    font-size: 1em;
+    height: 40px;
+    width: 200px;
+}
+
+
+.btn {
+    background-color: #1b75fd;
+    color: aliceblue;
+    border: none;
+    outline: none;
+
+    text-align: center;
+    font-size: 1em;
+    width: 9em;
+    padding: 0.8em;
+    border-radius: 10em;
+
+    margin: 20px 2px;
+}
+
+.btn-grey {
+    background-color: #9ea0ad;
+    color: aliceblue;
+    border: none;
+    outline: none;
+
+    text-align: center;
+    font-size: 1em;
+    width: 9em;
+    padding: 0.8em;
+    border-radius: 10em;
+}
+
+.save-botton {
+    display: inline-block;
+}
+
+#print-ticket {
+    background-color: #edeef0;
+    color: #000000;
+    font-size: 1em;
+
+    height: 240px;
+    width: 300px;
+    padding: 0.8em;
+    border-radius: 20px;
+}
