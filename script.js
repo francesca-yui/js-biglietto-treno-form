@@ -1,8 +1,14 @@
 const ticketForm = document.querySelector('form');
+
 const inputKm = document.getElementById('km');
 const inputAge = document.getElementById('age');
-const submit = document.querySelector('submit')
+const inputName = document.getElementById('passenger-name-input');
+
+const infoTicket = document.getElementById('info-ticket');
 const printTicket = document.getElementById('print-ticket');
+const ticketResult = document.getElementById('ticket-result');
+
+const resetBtn = document.getElementById('reset-btn');
 
 
 const PRICE_PER_KM = 0.21;
@@ -38,4 +44,18 @@ ticketForm.addEventListener('submit', (event) => {
 
     // risultato nell'UI
     displayPriceInPage(finalPrice);
+
+    // ticket visibile
+    ticketResult.classList.remove('hidden');
+    infoTicket.classList.add('hidden');
+    ticketForm.classList.add('hidden');
+});
+
+resetBtn.addEventListener('click', () => {
+    // Svuota i campi del form 
+    ticketForm.reset();
+    
+    ticketResult.classList.add('hidden');
+    infoTicket.classList.remove('hidden');
+    ticketForm.classList.remove('hidden');
 });

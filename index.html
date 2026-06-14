@@ -20,13 +20,13 @@
         </nav>
   
         <form>
-            <div class="container-form row">
+            <div class="container-user row">
                 <span class="col-6">
-                <i class="bi bi-person-fill"></i>
+                    <i class="bi bi-person-fill"></i>
                 </span>
                 <span class="user-name col-6">
-                    <label for="floatingInputValue">Nome Passeggero</label>
-                    <input type="text" class="form-control" placeholder="Mario Rossi">
+                    <label for="passenger-name-input">Nome Passeggero</label>
+                    <input type="text" id="passenger-name-input" class="form-control" placeholder="Mario Rossi" required>
                 </span>
             </div>
 
@@ -34,24 +34,23 @@
                 <div class="row">
                     <div class="input">
                         <span class="col-6">
-                        <i class="bi bi-geo-alt-fill"></i>
+                            <i class="bi bi-geo-alt-fill"></i>
                         </span>
                         <span class="col-6">
-                        <label for="km">Km da percorrere</label>
-                        <input type="number" id="km" required class="form-control" placeholder="100">
+                            <label for="km">Km da percorrere</label>
+                            <input type="number" id="km" required class="form-control" placeholder="100">
                         </span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input">
                         <span class="col-6">
-                        <i class="bi bi-calendar-fill"></i>
+                            <i class="bi bi-calendar-fill"></i>
                         </span>
                         <span class="col-6">
-                        <label for="age">Età del passeggero</label>
-                        <input type="number" id="age" required class="form-control" placeholder="16">
+                            <label for="age">Età del passeggero</label>
+                            <input type="number" id="age" required class="form-control" placeholder="35">
                         </span>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -61,18 +60,72 @@
         <div id="info-ticket">
             <span class="info">
                 <i class="bi bi-info-circle"></i>
-                <p><b>Regole di calcolo</b></p>
+                <p>Regole di calcolo</p>
             </span>
-                <ul>
-                    <li>Prezzo base: 0,21 € al km</li>
-                    <li>Sconto 20% per i <b>minorenni</b> (under 18)</li>
-                    <li>Sconto 40% per i <b>senior</b> (over 65) </li>
-                </ul>
-            
+            <ul>
+                <li>Prezzo base: 0,21 € al km</li>
+                <li>Sconto 20% per i <b>minorenni</b> (under 18)</li>
+                <li>Sconto 40% per i <b>senior</b> (over 65) </li>
+            </ul>  
         </div>
 
-        <div id="print-ticket"></div>
-        <button id="add-wallet-btn" class="btn" type="reset">Nuovo calcolo</button>
+        <div id="ticket-result" class="hidden">
+
+            <div id="print-ticket">
+                
+                <div class="ticket-row">
+                    <i class="bi bi-person-fill"></i>
+                    <div class="ticket-field">
+                        <label>Nome passeggero</label>
+                        <span id="ticket-name"></span>
+                    </div>
+                </div>
+
+                <div class="ticket-row">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <div class="ticket-field">
+                        <label>Km da percorrere</label>
+                        <span id="ticket-km"></span>
+                    </div>
+                </div>
+
+                <div class="ticket-row">
+                    <i class="bi bi-calendar-fill"></i>
+                    <div class="ticket-field">
+                        <label>Età del passeggero</label>
+                        <span id="ticket-age"></span>
+                    </div>
+                </div>
+
+                <div class="ticket-row">
+                    <i class="bi bi-tag-fill"></i>
+                    <div class="ticket-field">
+                        <label>Tipologia offerta</label>
+                        <span id="ticket-offer"></span>
+                    </div>
+                </div>
+
+                <div class="ticket-divider"></div>
+
+                <div class="price-row">
+                    <span>Prezzo base (0,21 € / km)</span>
+                    <span id="ticket-base-price"></span>
+                </div>
+                
+                <div class="price-row">
+                    <span>Sconto applicato</span>
+                    <span id="ticket-discount"></span>
+                </div>
+
+                <div class="final-price-box">
+                    <span>Prezzo finale</span>
+                    <strong id="ticket-final-price"></strong>
+                </div>
+
+            </div> 
+
+            <button id="reset-btn" class="btn" type="reset">Nuovo calcolo</button>
+        </div> 
     </main>
 </body>
 </html>

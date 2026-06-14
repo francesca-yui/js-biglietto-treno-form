@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fefefe;
+    padding-top: 20px;
 }
 
 .container {
@@ -17,56 +18,43 @@ body {
     align-items: center;
 }
 
+/* --- STRUTTURA DEL FORM --- */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.container-calculator{
+.container-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    background-color: #f4f5f7;
+    height: auto;
+    width: 300px;
+    padding: 1em;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.container-calculator {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
     align-items: center;
-    
-    background-color: #edeef0;
-
+    background-color: #f4f5f7;
     height: auto;
     width: 300px;
     padding: 1em;
     border-radius: 16px;
-
-}
-
-.container-form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-    
-    background-color: #edeef0;
-
-    height: auto;
-    width: 300px;
-    padding: 1em;
-    border-radius: 16px;
-
-    margin-bottom: 20px;
-}
-
-i {
-    width: 50px;
-    color: 5e718c;
-    align-items: center;
-    justify-content: center;
 }
 
 .user-name {
     display: flex;
     flex-direction: column;
     justify-content: start;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .input {
@@ -77,63 +65,61 @@ form {
     align-content: baseline;
 }
 
+/* Stile generale delle icone dei form */
 i {
-    justify-content: center;
-    align-items: start;
-
     color: #5e718c;
-    font-size: 1.6rem;                             
-
-    margin:10px;
+    font-size: 1.6rem;                                
+    margin: 10px;
     padding-right: 15px;
 }
     
 label {
     color: #9ea0ad;
+    font-size: 0.85em;
 }
 
 .form-control {
-    background-color: #edeef0;
-    color: black;
+    background-color: transparent; /* Cambiato: Sfondo trasparente per ereditare quello pulito del box */
+    color: #111e38;                
     border: none;
+    outline: none;                 /* Evita il bordo nero di focus al click */
     font-size: 1em;
+    font-weight: 600;              /* Testo dell'input in risalto */
     height: 40px;
     width: 200px;
 }
 
+/* --- PULSANTI --- */
 .btn {
     background-color: #1b75fd;
     color: aliceblue;
     border: none;
     outline: none;
-
     text-align: center;
     font-size: 1em;
+    font-weight: 600;
     width: 300px;
     padding: 0.8em;
     border-radius: 16px;
-
     margin: 20px 2px;
-
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background-color: aliceblue;
-    color: #1b75fd;
-    border: solid #1b75fd;
+    background-color: #0b63e0; 
+    color: white;
+    border: none;
 }
+
+/* --- BOX INFORMATIVO REGOLE --- */
 #info-ticket {
     background-color: #eaf3fe;
     border: 1px solid #edf5ff;
-    
     width: 300px;
     height: auto;
     padding: 1.25em 1.5em;
     border-radius: 16px;
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 20px;
 }
 
@@ -142,30 +128,29 @@ label {
     flex-direction: row;
     justify-content: flex-start; 
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .bi-info-circle {
     color: #1b75fd;
     font-size: 1.4em;
     display: inline-block;
-
+    padding-right: 0px !important; 
     margin: 0px;
-    padding-right: 0 !important;
 }
 
 .info p {
-    justify-content: left;
     color: #1b75fd;
-    font-size: 1em;
+    font-size: 0.9em;
+    font-weight: 600;
     margin: 0; 
     padding: 0;
+    padding-left: 6px;
 }
 
 ul {
     margin: 0;
-    padding-left: 1.1em; 
-    
+    padding-left: 1em; 
     display: flex;
     flex-direction: column;
     gap: 12px; 
@@ -174,16 +159,111 @@ ul {
 li {
     color: #2c3e6b;
     font-size: 0.8em;
+    font-weight: 400;       /*  Regular su tutta la riga */
+    white-space: nowrap;    /* Impedisce al testo di andare a capo */
+}
+
+li b {
+    font-weight: 700;       /* Solo le parole dentro <b> (minorenni/senior) saranno Bold */
 }
 
 
 #print-ticket {
-    background-color: #edeef0;
-    color: #000000;
-    font-size: 1em;
-
-    height: 240px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #e2e8f0; 
     width: 300px;
-    padding: 0.8em;
-    border-radius: 16px;
+    height: auto;
+    padding: 1.5em;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.ticket-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 0.8em 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ticket-row:last-of-type {
+    border-bottom: none; 
+}
+
+.ticket-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ticket-field label {
+    color: #9ea0ad;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.ticket-field span {
+    color: #111e38;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+#print-ticket i {
+    color: #5e718c;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.ticket-divider {
+    border-top: 1px dashed #cbd5e1; 
+    margin: 1.2em 0;
+    width: 100%;
+}
+
+.price-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.4em 0;
+    font-size: 0.9em;
+    color: #5e718c;
+}
+
+.price-row span:last-child {
+    color: #111e38;
+    font-weight: 600;
+}
+
+.final-price-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf3fe;
+    border: 1px solid #edf5ff;
+    width: 100%; 
+    padding: 1em 1.2em;
+    border-radius: 14px;
+    margin-top: 1.2em;
+}
+
+.final-price-box span {
+    color: #1b75fd;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+.final-price-box strong {
+    color: #1b75fd;
+    font-size: 1.6em; 
+    font-weight: 700;
+}
+
+/* STILE DI CONTROLLO STATI */
+.hidden {
+    display: none !important;
 }
